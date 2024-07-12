@@ -23,4 +23,3 @@ const urls = ['https://jsonplaceholder.typicode.com/todos/5', 'https://jsonplace
             console.error('Error:', error);
         });
 
-        new Splide
