@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="aside">
+          <div class="img-part">
+            <img
+              src="https://cdn.vectorstock.com/i/1000x1000/04/41/registration-abstract-concept-vector-34940441.webp"
+              alt="Back_IMG"
+              height="700"
+              width="700"
+            />
+          </div>
+        </div>
+
+        <div class="aside-sec">
+          <h1 class="Sign-up">Sign Up</h1>
+          <form action="" onsubmit="FormSubmit(event)">
+
+            <div class="field">
+              <label for="Username">Username <span>*</span></label>
+              <input type="text" name="name" placeholder="Mr. Kpatel" id="Username"
+              oninput="getUsername()" autofocusgd/>
+              <p id="forUsername">* Please Enter Valid Username</p>
+              <div class="msg" id="Forname">
+                <img src="./assets/image.png" alt="tick" height="20"><text>Username Correct.</text>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address <span>*</span></label>
+              <input type="email" name="email" placeholder="Demo@gmail.com" id="mail" oninput="validateEmail()"/>
+              <p id="forEmail">* Please Enter Valid Email Address</p>
+              <div class="msg" id="corMail">
+                <img src="./assets/image.png" alt="tick" height="20"><text>Email Correct.</text>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="password">Password <span>*</span></label>
+              <input type="password" name="password" id="password" placeholder="123@Demo" oninput="validatePass()"/>
+              <p id="forPass">* Please Enter Valid Password</p>
+              <div class="msg" id="corPass">
+                <img src="./assets/image.png" alt="tick" height="20"><text>Password Correct.</text>
+              </div>
+            </div>
+
+            <div class="field">
+                <label for="confirm-password">Confirm-Password <span>*</span></label>
+              <input type="password" name="ConfirmPassword" id="ConfirmPass"  oninput="confirmPass()" placeholder="123@Demo"/>
+              <p id="ConfPass">* Please Enter Correct Password</p>
+              <div class="msg" id="corConfPass">
+                <img src="./assets/image.png" alt="tick" height="20"><text>Password Must Be Match.</text>
+              </div>
+            </div>
+
+            <div class="btn">
+              <button type="submit" id="FormBtn">Register</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

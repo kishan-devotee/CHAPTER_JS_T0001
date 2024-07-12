@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 98vh;
+    width: 100%;
+    background-color: #e6eeff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    height: 96%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2%;
+    display: flex;
+}
+
+.aside {
+    height:100%;
+    width: 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2%;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+
+.img-part img {
+    animation: leaves 2s ease-in-out infinite alternate;
+}
+
+.img-part {
+    height: 61vh;    
+    width:40vw;
+    overflow: hidden;
+}
+
+@keyframes leaves {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.aside-sec {
+    height: 100%;
+    width: 55%;
+    /* background-color: rgb(230, 252, 255); */
+    border-radius: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Sign-up {
+    border-bottom : 1px solid rgb(26, 105, 223);
+    margin-bottom: 50px;
+    color: #6595fc;
+}
+
+.aside-sec input {
+    width: 30vw;
+    padding: 20px 10px;
+    font-size: larger;
+    outline: none;
+    background-color: white;
+    margin: 1vh 0;
+    border-radius: 30px;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.aside-sec span {
+    color: red;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    display: flex;
+    margin-top: 30px;                       
+    justify-content: center;
+}
+
+.btn button {
+    padding: 15px;
+    width: 13vw;
+    border: 0;
+    background-color: rgb(143, 178, 255);
+    border-radius: 5px;
+    color: aliceblue;
+    cursor: no-drop;
+    transition: all 0.3s;
+    border: 1px solid rgb(47, 113, 255);
+}
+
+.btn button:hover {
+    background-color: white;
+    color: rgb(47, 113, 255);
+}
+
+.field p {
+    color: red;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.msg {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    display: none;
+}
+.msg text {
+    margin: 10px 5px;
+    color: rgb(59, 197, 59);
+}
