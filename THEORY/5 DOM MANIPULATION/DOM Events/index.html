@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Events</title>
+</head>
+<body>
+
+    <h1>DOM - Events</h1>
+    <button id="btn">Click Me</button>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, quaerat.</p>
+    <script>
+        
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', () => {
+            alert('You clicked me!');
+        });
+
+        const p = document.querySelector('p');
+        p.addEventListener('click', () => {
+            alert('You clicked me!');
+        });
+
+        p.addEventListener('mouseover', () => {
+            p.style.color ='red';
+        }); 
+
+        p.addEventListener('mouseover', () => {
+            p.style.color ='red';
+        });
+
+        p.addEventListener('mouseout', () => {
+            p.style.color = 'black';
+        });
+
+        p.addEventListener('mousedown', () => {
+            p.style.color = 'blue';
+        });
+
+        p.addEventListener('mouseup', () => {
+            p.style.color = 'black';
+        });
+
+        p.addEventListener('dblclick', () => {
+            p.style.color = 'green';
+        });
+    </script>
+    
+</body>
+</html>
