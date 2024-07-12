@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>GEOLOCATION</title>
+    <style>
+        .main {
+            height: 97vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(201, 201, 201);
+        }
+        button {
+            height: 35px;
+            position: absolute;
+            bottom: 350px;
+            background-color: rgb(189, 245, 245);
+            color: red;
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: rgb(250, 79, 79);
+            color: white;
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+     <h1>Click Here And Get your current Location</h1>
+        <button id="Get-Locate">
+            <span class="material-symbols-outlined">
+                share_location
+                </span>
+        </button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

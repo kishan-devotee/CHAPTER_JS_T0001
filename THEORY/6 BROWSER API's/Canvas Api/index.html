@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Api</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(250, 250, 100, 0, Math.PI * 2, false);
+      ctx.fillStyle = "green";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.arc(250, 250, 50, 0, Math.PI * 2, false);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.arc(250, 250, 25, 0, Math.PI * 2, false);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.arc(250, 250, 15, 0, Math.PI * 2, false);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.arc(250, 250, 10, 0, Math.PI * 2, false);
+      ctx.fillStyle = "black";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.arc(250, 250, 5, 0, Math.PI * 2, false);
+      ctx.fillStyle = "white";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.arc(250, 250, 2, 0, Math.PI * 2, false);
+      ctx.fillStyle = "black";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+      ctx.arc(250, 250, 1, 0, Math.PI * 2, false);
+      ctx.fillStyle = "white";
+      ctx.fill();
+      ctx.closePath();
+      ctx.beginPath();
+    </script>
+  </body>
+</html>
