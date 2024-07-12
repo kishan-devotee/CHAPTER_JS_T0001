@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Life Balance</title>
+  </head>
+  <body>
+    <div class="box">
+      <a class="button" href="#popup1"
+        ><span class="material-symbols-outlined">
+          control_point_duplicate
+        </span>
+      </a>
+    </div>
+
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <a class="close" href="#"><span onclick="onClose()">&times;</span></a>
+        <div class="content">
+          <form action="" onsubmit="onSubmitTask(event)">
+            <input type="text" autofocus id="inp" name="task" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="all" onclick="allTask()">All</button>
+      <button class="compl" onclick="comp()">Complete</button>
+      <button class="pending" onclick="pend()">Pending</button>
+    </div>
+
+    <div class="container">
+      <div id="todo-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
