@@ -2,34 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown Timer</title>
 </head>
 <body>
-    <p id="demo"></p>
+    <div class="main">
+        <div class="overlay">
+            <div class="main-line">We are coming soon...</div>
+            <div id="end-time">Set your own end date and time:</div>
 
-<script>
-var countDownDate = new Date("Jan 5, 2025  15:37:25").getTime();
+            <div class="col">
+                <div>
+                    <input type="text" readonly value="0"><br>
+                    <label for="#">days</label>
+                </div>
+                <div>
+                    <input type="text" readonly value="0"><br>
+                    <label for="#">hours</label>
+                </div>
+                <div>
+                    <input type="text" readonly value="0"><br>
+                    <label for="#">minute</label>
+                </div>
+                <div>
+                    <input type="text" readonly value="0"><br>
+                    <label for="#">second</label>
+                </div>
+            </div>
 
-var x = setInterval(function() {
+            <div class="date-time-input">
+                <input type="datetime-local" id="userEndDate">
+                <button id="startCountdown">Start Countdown</button>
+            </div>
 
-  var now = new Date().getTime();
-
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
+            <div id="completionMessage" style="display: none;">The countdown is complete!</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
