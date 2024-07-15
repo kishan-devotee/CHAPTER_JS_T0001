@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 body {
-    background-color: rgb(215, 245, 250);
+    background: url('https://imgs.search.brave.com/5uwLm6hJLWbRWXdDMgaHbjumdEGVm9NcGqujmmtpCwg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWd2/My5mb3Rvci5jb20v/aW1hZ2VzL2Jsb2ct/Y292ZXItaW1hZ2Uv/cGFydC1ibHVycnkt/aW1hZ2UuanBn');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 * {
@@ -37,6 +39,7 @@ nav ul li {
     align-items: center;
     font-weight: bolder;
     font-size: 1.3rem;
+    color: #28a745;
 }
 
 .container {
@@ -49,7 +52,14 @@ nav ul li {
     width: 70%;
     border-radius: 12px;
     padding: 34px;
-    background-image: url('bg.jpg');
+}
+
+.songList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%
 }
 
 .bottom {
@@ -82,14 +92,23 @@ nav ul li {
 }
 
 .songItemContainer {
-    margin-top: 74px;
+    margin-top: 45px;
+    width: 80%;
+    height: 50vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.songItemContainer::-webkit-scrollbar {
+    display: none;
 }
 
 .songItem {
     height: 50px;
+    width: 100%;
     display: flex;
-    background-color: white;
-    color: black;
+    background-color: rgb(66, 66, 66);
+    color: rgb(255, 255, 255);
     margin: 12px 0;
     justify-content: space-between;
     align-items: center;

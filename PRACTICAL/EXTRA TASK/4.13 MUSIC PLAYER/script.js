@@ -35,7 +35,7 @@ const loadSongs = () => {
             <span class="songName">${song.songName}</span>
             <span class="songlistplay">
                 <span class="timestamp">
-                    05:34 
+                    Arijit Singh 
                     <i id="${i}" class="far songItemPlay fa-play-circle"></i>
                     <i id="delete-${i}" class="fas fa-trash-alt songItemDelete"></i>
                 </span>
@@ -65,7 +65,7 @@ const setSongItemEvents = () => {
 
     document.querySelectorAll('.songItemDelete').forEach((element) => {
         element.addEventListener('click', (e) => {
-            const deleteIndex = parseInt(e.target.id.split('-')[1]);
+            const deleteIndex = parseInt(e.target.id);
             songs.splice(deleteIndex, 1);
             loadSongs();
         });
@@ -111,5 +111,15 @@ audioElement.addEventListener('timeupdate', () => {
 myProgressBar.addEventListener('change', () => {
     audioElement.currentTime = myProgressBar.value * audioElement.duration / 100;
 });
+
+
+// shuffleBtn.addEventListener('click', () => {
+//     isShuffle =!isShuffle;
+//     if (isShuffle) {
+
+//     } else {
+//     }
+//     loadSongs();
+// });
 
 loadSongs();
