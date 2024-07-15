@@ -13,6 +13,13 @@ list.addEventListener('dragstart', (e) => {
         right.appendChild(select);
         select = null;
     });
+    left.addEventListener('dragover', (e) => {
+        e.preventDefault();
+    });
+    left.addEventListener('drop', (e) => {
+        left.appendChild(select);
+        select = null;
+    });
 });
 
 const addTaskButton = document.getElementById('add-task-button');
