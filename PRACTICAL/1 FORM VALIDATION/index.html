@@ -49,7 +49,7 @@
             <div class="field">
               <label for="password">Password <span>*</span></label>
               <input type="password" name="password" id="password" placeholder="123@Demo" oninput="validatePass()"/>
-              <p id="forPass">* Please Enter Valid Password</p>
+              <p id="forPass">* Password Must be ( 8 characters, uppercase, lowercase, special character).</p>
               <div class="msg" id="corPass">
                 <img src="./assets/image.png" alt="tick" height="20"><text>Password Correct.</text>
               </div>
@@ -58,9 +58,9 @@
             <div class="field">
                 <label for="confirm-password">Confirm-Password <span>*</span></label>
               <input type="password" name="ConfirmPassword" id="ConfirmPass"  oninput="confirmPass()" placeholder="123@Demo"/>
-              <p id="ConfPass">* Please Enter Correct Password</p>
+              <p id="ConfPass">* Password does not match.</p>
               <div class="msg" id="corConfPass">
-                <img src="./assets/image.png" alt="tick" height="20"><text>Password Must Be Match.</text>
+                <img src="./assets/image.png" alt="tick" height="20"><text>Password Matched.</text>
               </div>
             </div>
 
