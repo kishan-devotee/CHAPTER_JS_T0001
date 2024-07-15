@@ -1,27 +1,27 @@
 console.log("Welcome");
 
 let songIndex = 0;
-let audioElement = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+let audioElement = new Audio('assets/Audio/Audio.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
 let masterSongName = document.getElementById('masterSongName');
 let songItemContainer = document.getElementById('songItemContainer');
-let prevBtn = document.getElementById('previous');
-let nextBtn = document.getElementById('next');
+let prevBtn = document.querySelector('#previous');
+let nextBtn = document.querySelector('#next');
 let isShuffle = false;
 let shuffleBtn = document.querySelector('#shuffle')
 
 let songs = [
-    { songName: "Warriyo", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", coverPath: "assets/covers/1.jpg" },
-    { songName: "Cielo", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3", coverPath: "assets/covers/2.jpg" },
-    { songName: "DEAF KEV", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3", coverPath: "assets/covers/3.jpg" },
-    { songName: "Different Heaven ", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3", coverPath: "assets/covers/4.jpg" },
-    { songName: "Janji-Heroes", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3", coverPath: "assets/covers/5.jpg" },
-    { songName: "joenson Will", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3", coverPath: "assets/covers/6.jpg" },
-    { songName: "Itsuta - Salam", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3", coverPath: "assets/covers/7.jpg" },
-    { songName: "viega Dena", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3", coverPath: "assets/covers/8.jpg" },
-    { songName: "Istumbila kumbod", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3", coverPath: "assets/covers/9.jpg" },
+    { songName: "Warriyo", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", coverPath: "https://plus.unsplash.com/premium_photo-1664112065830-5819554d0ec2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y292ZXIlMjBwaG90b3xlbnwwfHwwfHx8MA%3D%3D" },
+    { songName: "Cielo", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3", coverPath: "https://media.istockphoto.com/id/905234844/photo/listening-music-smart-phone-connected-to-car-audio-system.webp?b=1&s=170667a&w=0&k=20&c=F2u9uO3VPRB1GhEWDo3J64hay4tBQ-hVmbDtsJReKeQ=" },
+    { songName: "DEAF KEV", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3", coverPath: "https://images.unsplash.com/photo-1548621641-6aa2e973a768?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y292ZXIlMjBwaG90byUyMG11c2ljfGVufDB8fDB8fHww" },
+    { songName: "Different Heaven ", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3", coverPath: "https://images.unsplash.com/photo-1471478331149-c72f17e33c73?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y292ZXIlMjBwaG90byUyMG11c2ljfGVufDB8fDB8fHww" },
+    { songName: "Janji-Heroes", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3", coverPath: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvdmVyJTIwcGhvdG8lMjBtdXNpY3xlbnwwfHwwfHx8MA%3D%3D" },
+    { songName: "joenson Will", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3", coverPath: "https://images.unsplash.com/photo-1483032469466-b937c425697b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNvdmVyJTIwcGhvdG8lMjBtdXNpY3xlbnwwfHwwfHx8MA%3D%3D" },
+    { songName: "Itsuta - Salam", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3", coverPath: "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvdmVyJTIwcGhvdG8lMjBtdXNpY3xlbnwwfHwwfHx8MA%3D%3D" },
+    { songName: "viega Dena", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3", coverPath: "https://media.istockphoto.com/id/1249932784/photo/audio-book-concept-headphones-and-book-over-wooden-table.webp?b=1&s=170667a&w=0&k=20&c=TR4cdMXOVEKJSFOhEuY2QIzaKQBeO6cT9KVbb5N3BBg=" },
+    { songName: "Istumbila kumbod", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3", coverPath: "https://media.istockphoto.com/id/905234844/photo/listening-music-smart-phone-connected-to-car-audio-system.webp?b=1&s=170667a&w=0&k=20&c=F2u9uO3VPRB1GhEWDo3J64hay4tBQ-hVmbDtsJReKeQ=" },
     { songName: "disti mumbra", filePath: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3", coverPath: "assets/covers/10.jpg" },
 ]
 
@@ -77,7 +77,7 @@ document.getElementById('addSongForm').addEventListener('submit', (e) => {
     const songName = document.getElementById('songNameInput').value;
     const filePath = document.getElementById('filePathInput').value;
     const coverPath = document.getElementById('coverPathInput').value;
-    songs.push({ songName, filePath, coverPath });
+    songs.unshift({ songName, filePath, coverPath });
     loadSongs();
     e.target.reset();
 });
@@ -112,14 +112,60 @@ myProgressBar.addEventListener('change', () => {
     audioElement.currentTime = myProgressBar.value * audioElement.duration / 100;
 });
 
+prevBtn.addEventListener('click', () => {
+    
 
-// shuffleBtn.addEventListener('click', () => {
-//     isShuffle =!isShuffle;
-//     if (isShuffle) {
+    if (isShuffle) {
+        songIndex = songs.findIndex((song) => song.songName === masterSongName.innerText);
+        songs = [...songs.slice(songIndex + 1), songs[songIndex],...songs.slice(0, songIndex)];
+        loadSongs();
+        songIndex = (songIndex + 1) % songs.length;
+        makeAllPlays();
+        audioElement.src = songs[songIndex].filePath;
+        masterSongName.innerText = songs[songIndex].songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        gif.style.opacity = 1;
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+        console.log("Clicked");
+    } else {
+        songIndex = (songIndex - 1 + songs.length) % songs.length;
+        makeAllPlays();
+        audioElement.src = songs[songIndex].filePath;
+        masterSongName.innerText = songs[songIndex].songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        gif.style.opacity = 1;
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+        console.log("Clicked");
+    }
+})
 
-//     } else {
-//     }
-//     loadSongs();
-// });
+nextBtn.addEventListener('click', () => {
+    songIndex = (songIndex + 1) % songs.length;
+    makeAllPlays();
+    audioElement.src = songs[songIndex].filePath;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    gif.style.opacity = 1;
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+    console.log("Clicked");
+})
+
+console.log(prevBtn);
+
+shuffleBtn.addEventListener('click', () => {
+    isShuffle = !isShuffle;
+    if (isShuffle) {
+        shuffleBtn.style.color = "green";
+    } else {
+        shuffleBtn.style.color = "white";
+    }
+    loadSongs();
+});
 
 loadSongs();
