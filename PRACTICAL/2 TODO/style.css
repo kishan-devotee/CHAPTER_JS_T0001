@@ -185,7 +185,7 @@ h1 {
 .box-todo {
   height: 19vh;
   width: 15vw;
-  background-color: #f8f8dc;
+  background-color: #4e4e4ec7;
   border-radius: 3%;
   margin: 15px;
   overflow-wrap: anywhere;
@@ -200,9 +200,9 @@ h1 {
 .Comp-box-todo {
   height: 19vh;
   width: 15vw;
-  background-color: #ebf1a3;
   border-radius: 3%;
   margin: 15px;
+  background-color: #faf9ad8e;
   overflow-wrap: anywhere;
   padding: 15px;
   display: flex;
@@ -228,6 +228,11 @@ h1 {
   width: 100%;
   background-color: #fcfff1;
   overflow-y: auto;
+  box-sizing: border-box;
+  padding: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .TaskComp {

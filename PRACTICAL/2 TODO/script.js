@@ -9,6 +9,7 @@ const onSubmitTask = (event) => {
   Store.unshift({ task: task, completed: false });
   localStorage.setItem("tasks", JSON.stringify(Store));
   inp.value = "";
+  window.location.href = "#";
   window.location.reload();
 };
 
