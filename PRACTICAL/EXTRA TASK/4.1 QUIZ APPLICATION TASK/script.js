@@ -43,6 +43,8 @@ const ShowQuestions = (Q) => {
   let box = document.querySelector(".box");
 
   if (counter >= Q.length) {
+    let scoreBox = document.querySelector(".score");
+    scoreBox.style.opacity = "0";
     let res = `
             <h1>Finish!</h1>
             <h3>Your score is: ${corAns} out of 5</h3>
@@ -106,6 +108,5 @@ const ShowScore = (Q) => {
   scoreBox.innerHTML = score;
 };
 
-// Start the quiz
 ShowScore(quizData);
 ShowQuestions(quizData);

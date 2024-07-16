@@ -1,49 +1,69 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
 }
 
 main {
-    height: 98vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to top, #7ed9f5 0%, #fed6e3 100%);
 }
 
 .box {
-    background-color: aliceblue;
-    height: auto ;
-    width: 40vw;
-    border-radius: 5%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 20px;
+  background-color: rgb(255, 255, 255);
+  height: auto;
+  width: 40vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+  position: relative;
 }
 
 .options {
-    margin: 15px;
+  margin: 15px;
 }
 
 .btns {
-    margin: 15px;
-    display: flex;
-    justify-content: space-around;
+  margin: 5px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .score {
-    background-color: antiquewhite;
-    position: absolute;
-    top: 0;
+  background-color: rgb(92, 182, 255);
+  position: absolute;
+  top: 28%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px 0px 0px;
+  padding: 10px;
 }
 
 button {
-    background-color: rgb(203, 255, 238);
-    border: 1px solid gray;
-    padding: 10px;
-    cursor: pointer;
+  background-color: rgb(65, 176, 250);
+  border: 1px solid gray;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
 }
 
+button:hover {
+  background-color: transparent;
+  color: black;
+  border: 2px solid rgb(66, 115, 248);
+}
