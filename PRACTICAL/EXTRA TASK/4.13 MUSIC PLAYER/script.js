@@ -105,6 +105,9 @@ masterPlay.addEventListener('click', () => {
 
 audioElement.addEventListener('timeupdate', () => {
     progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+    if (progress >= 100) {
+        songIndex++;
+    }
     myProgressBar.value = progress;
 });
 
@@ -112,40 +115,7 @@ myProgressBar.addEventListener('change', () => {
     audioElement.currentTime = myProgressBar.value * audioElement.duration / 100;
 });
 
-prevBtn.addEventListener('click', () => {
-    
-
-    if (isShuffle) {
-        songIndex = songs.findIndex((song) => song.songName === masterSongName.innerText);
-        songs = [...songs.slice(songIndex + 1), songs[songIndex],...songs.slice(0, songIndex)];
-        loadSongs();
-        songIndex = (songIndex + 1) % songs.length;
-        makeAllPlays();
-        audioElement.src = songs[songIndex].filePath;
-        masterSongName.innerText = songs[songIndex].songName;
-        audioElement.currentTime = 0;
-        audioElement.play();
-        gif.style.opacity = 1;
-        masterPlay.classList.remove('fa-play-circle');
-        masterPlay.classList.add('fa-pause-circle');
-        console.log("Clicked");
-    } else {
-        songIndex = (songIndex - 1 + songs.length) % songs.length;
-        makeAllPlays();
-        audioElement.src = songs[songIndex].filePath;
-        masterSongName.innerText = songs[songIndex].songName;
-        audioElement.currentTime = 0;
-        audioElement.play();
-        gif.style.opacity = 1;
-        masterPlay.classList.remove('fa-play-circle');
-        masterPlay.classList.add('fa-pause-circle');
-        console.log("Clicked");
-    }
-})
-
-nextBtn.addEventListener('click', () => {
-    songIndex = (songIndex + 1) % songs.length;
-    makeAllPlays();
+let PlayerCommand = () => {
     audioElement.src = songs[songIndex].filePath;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
@@ -153,10 +123,41 @@ nextBtn.addEventListener('click', () => {
     gif.style.opacity = 1;
     masterPlay.classList.remove('fa-play-circle');
     masterPlay.classList.add('fa-pause-circle');
-    console.log("Clicked");
+}
+
+prevBtn.addEventListener('click', () => {
+    if (isShuffle) {
+        songIndex = Math.floor(Math.random() * songs.length);
+     
+        console.log(songIndex);
+    }else {
+        songIndex = (songIndex - 1 + songs.length) % songs.length;
+    }
+    makeAllPlays();
+    PlayerCommand()
 })
 
-console.log(prevBtn);
+nextBtn.addEventListener('click', () => {
+    if (isShuffle) {
+        songIndex = Math.floor(Math.random() * songs.length);
+    }else {
+        songIndex = (songIndex + 1) % songs.length;
+    }
+    makeAllPlays();
+    PlayerCommand()
+})
+
+audioElement.addEventListener('ended', () => {
+    if (isShuffle) {
+        songIndex = Math.floor(Math.random() * songs.length);
+    } else {
+        console.log(songIndex,songs.length);
+        songIndex = songIndex % songs.length;
+    }
+    makeAllPlays();
+    PlayerCommand()
+});
+
 
 shuffleBtn.addEventListener('click', () => {
     isShuffle = !isShuffle;

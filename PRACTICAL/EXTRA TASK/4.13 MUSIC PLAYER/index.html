@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/Gif/playing.gif" type="image/x-icon">
     <title>Your favorite music is here</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,19 +29,19 @@
                 <button type="submit">Add Song</button>
             </form>
             <div class="songItemContainer" id="songItemContainer"></div>
+            <div class="bottom">
+                <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+                <div class="icons">
+                    <i class="fas fa-3x fa-step-backward" id="previous"></i>
+                    <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+                    <i class="fas fa-3x fa-step-forward" id="next"></i>
+                    <i class="fas fa-3x fa-random" id="shuffle"></i>
+                </div>
+                <div class="songInfo">
+                    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdm1tdmNoMXJjNnA2YWJmNXIxZ2Z1cDF2bWRieGVjY2xjZWdweG0wMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XMaB779YCmP9m/giphy.webp" width="52px" alt="" id="gif"> <span id="masterSongName">The Music</span>
+                </div>
         </div>
         <div class="songBanner"></div>
-        <div class="bottom">
-            <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
-            <div class="icons">
-                <i class="fas fa-3x fa-step-backward" id="previous"></i>
-                <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
-                <i class="fas fa-3x fa-step-forward" id="next"></i>
-                <i class="fas fa-3x fa-random" id="shuffle"></i>
-            </div>
-            <div class="songInfo">
-                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdm1tdmNoMXJjNnA2YWJmNXIxZ2Z1cDF2bWRieGVjY2xjZWdweG0wMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XMaB779YCmP9m/giphy.webp" width="52px" alt="" id="gif"> <span id="masterSongName">The Music</span>
-            </div>
         </div>
     </div>
 
