@@ -1,0 +1,48 @@
+<!-- Forms and Input Handling using dom manipulation -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Handle</title>
+ </head>
+ <body>
+
+    <h1>Forms and Input Handling using dom manipulation</h1>
+
+    <form action="">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="submit" value="submit" id="submit">
+    </form>
+    <div class="error"></div>
+
+    <script>
+        const form = document.querySelector('form');
+        const name = document.querySelector('#name');
+        const email = document.querySelector('#email');
+        const password = document.querySelector('#password');
+        const submit = document.querySelector('#submit');
+        const errorElement = document.querySelector('.error');
+        errorElement.style.color = "red"
+
+        form.addEventListener('submit', (e) => {
+            let messages = [];
+            if (name.value === '' || name.value == null) {
+                messages.push('Name is required');
+            }
+            if (email.value === '' || email.value == null) {
+                messages.push('Email is required');
+            }
+            if (password.value === '' || password.value == null) {
+                messages.push('Password is required');
+            }
+            if (messages.length > 0) {
+                e.preventDefault();
+                errorElement.innerText = messages.join(', ');
+            }
+        });
+    </script>
+ </body>
+ </html>
