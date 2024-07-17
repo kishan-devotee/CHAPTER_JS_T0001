@@ -18,7 +18,14 @@ const FormSubmit = (event) => {
     btn.style.cursor = 'no-drop'
     btn.style.backgroundColor = 'rgb(143, 178, 255)'
     alert('data submitted')
+}
 
+let Validate = (Validators) => {
+    Validators.style.display = 'block'
+    btn.setAttribute('disable', 'disable')
+    btn.style.cursor = 'no-drop'
+    btn.style.backgroundColor = 'rgb(143, 178, 255)'
+    correction.style.display = 'none'
 }
 
 const getUsername = () => {
@@ -26,11 +33,7 @@ const getUsername = () => {
     let Validators = document.querySelector('#forUsername')
     const UsernameRegex = /^[a-zA-Z\s]+$/;
     if (UserName.length < 3 || !(UsernameRegex.test(UserName))) {
-        Validators.style.display = 'block'
-        btn.setAttribute('disable', 'disable')
-        btn.style.cursor = 'no-drop'
-        btn.style.backgroundColor = 'rgb(143, 178, 255)'
-        correction.style.display = 'none'
+        Validate(Validators)
     } else {
         Validators.style.display = 'none'
         correction.style.display = 'block'
@@ -44,11 +47,7 @@ const validateEmail = () => {
     let Validators = document.querySelector('#forEmail')
     const EmailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (!(EmailRegex.test(mail))) {
-        Validators.style.display = 'block'
-        btn.setAttribute('disable', 'disable')
-        btn.style.cursor = 'no-drop'
-        btn.style.backgroundColor = 'rgb(143, 178, 255)'
-        corMail.style.display = 'none'
+        Validate(Validators)
     } else {
         Validators.style.display = 'none'
         btn.style.backgroundColor = 'rgb(47, 113, 255)'
@@ -63,11 +62,7 @@ const validatePass = () => {
     let Validators = document.querySelector('#forPass')
     const PassRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
     if (!(PassRegex.test(password))) {
-        Validators.style.display = 'block'
-        btn.setAttribute('disable', 'disable')
-        btn.style.cursor = 'no-drop'
-        btn.style.backgroundColor = 'rgb(143, 178, 255)'
-        corPass.style.display = 'none'
+        Validate(Validators)
     } else {
         Validators.style.display = 'none'
         passStore = password;
@@ -81,11 +76,7 @@ const confirmPass = () => {
     let confPass = document.querySelector('#ConfirmPass').value
     let Validators = document.querySelector('#ConfPass')
     if (confPass !== passStore || confPass == "") {
-        Validators.style.display = 'block'
-        btn.setAttribute('disable', 'disable')
-        btn.style.cursor = 'no-drop'
-        btn.style.backgroundColor = 'rgb(143, 178, 255)'
-        corConfPass.style.display = 'none'
+        Validate(Validators)
     } else {
         Validators.style.display = 'none'
         btn.style.backgroundColor = 'rgb(47, 113, 255)'
