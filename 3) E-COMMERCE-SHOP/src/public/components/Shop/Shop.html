@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="/src/public/components/Shop/shop.css">
+</head>
+
+<body>
+
+    <section id="page-header">
+        <h2>#Stayhome</h2>
+        <p>Save more with coupons & up to 20% off!</p>
+    </section>
+
+    <section id="filters" class="section-p1">
+        <div>
+            <label for="category-filter">Category:</label>
+            <select id="category-filter" onchange="applyFilters()">
+                <option value="all">All</option>
+                <option value="Living Room Furniture">Living Room Furniture</option>
+                <option value="Dining Room Furniture">Dining Room Furniture</option>
+                <option value="Bedroom Furniture">Bedroom Furniture</option>
+                <option value="Office Furniture">Office Furniture</option>
+            </select>
+        </div>
+        <div>
+            <label for="price-filter">Price Range:</label>
+            <input type="range" id="price-filter" min="0" max="3500" step="100" onchange="applyFilters()">
+            <span id="price-value">₹0 - ₹3500</span>
+        </div>
+        <div>
+            <label for="quality-filter">Quality:</label>
+            <select id="quality-filter" onchange="applyFilters()">
+                <option value="all">All</option>
+                <option value="Premium">Premium</option>
+                <option value="High">High</option>
+                <option value="Luxury">Luxury</option>
+                <option value="Standard">Standard</option>
+            </select>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <div class="pro-container" id="product-area">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

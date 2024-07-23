@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/public/components/ResetPass/resetpass.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ResetContainer">
+        <div class="reset-box">
+            <h2><u>Reset Password</u></h2>
+        <p>Please enter a new password for your account.</p>
+        <form action="#" onsubmit="ResetPassword(event)">
+           <div class="field-reset">
+            <input type="password" id="newPass" placeholder="Enter New Password" required>
+           </div>
+            <div class="field-reset">
+                <input type="password" id="confPass" placeholder="Confirm New Password" required>
+            </div>
+            <p id="reset-suc" class="reset-suc-msg">Your password reset has been successfuly. Redirect in sign-in. Wait a sec...</p>
+            <p id="reset-pass-msg" class="reset-msg">* Password Must be ( 8 characters, uppercase, lowercase, special character).</p>
+            <p id="reset-pass-compare-msg" class="reset-msg">* New password and confirm password do not match.</p>
+            <div class="reset-btn">
+                <button type="submit" id="reset-button">Reset Password</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

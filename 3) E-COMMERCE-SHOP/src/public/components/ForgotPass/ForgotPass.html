@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/public/components/ForgotPass/forgotpass.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="forgotContainer">
+        <div class="forgot-box">
+            <h2><u>Forgot Password</u></h2>
+            <form action="#" onsubmit="ForgotPassword(event)">
+                <div class="field-forgot">
+                    <input type="text" id="forgot-mail" placeholder="Enter Email Address..." required>
+                </div>
+                <p class="sec-que"> What is Your Birth Place ?</p>
+                <div class="field-forgot">
+                    <input type="text" id="sec-question" placeholder="Ans Security Question  " required>
+                </div>
+                <div class="field-forgot">
+                    <input type="password" id="change-pass" placeholder=" New Password" required>
+                </div>
+
+                <p id="forgot-pass-msg" class="forgot-msg-suc">Password has been successfully changed.you will e
+                    redirect on sign-in. Wait a sec ...</p>
+                <p id="forgot-pass-inc-msg" class="forgot-msg-pass">* Password Must be ( 8 characters, uppercase,
+                    lowercase, special character).</p>
+                <p id="forgot-pass-not-msg" class="forgot-msg-not">* Email or security question answer is incorrect.</p>
+                
+                <div class="forgot-btn">
+                    <button type="submit" id="forgot-button">Forgot Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

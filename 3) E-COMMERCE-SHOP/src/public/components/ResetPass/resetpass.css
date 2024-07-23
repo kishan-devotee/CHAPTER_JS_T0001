@@ -1,0 +1,73 @@
+.ResetContainer {
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ResetContainer .reset-box {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 5vh;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reset-box h2 {
+  color: #088178;
+  text-align: center;
+}
+
+.field-reset {
+  margin: 2vh 0;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.field-reset input {
+  border: 0;
+  outline: none;
+  font-size: 15px;
+}
+
+.reset-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-btn {
+  margin-top: 2vh;
+}
+
+.reset-btn button {
+  padding: 10px;
+  width: 100%;
+  background-color: #088178;
+  border: 0;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.reset-btn button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #088178;
+}
+
+.reset-msg {
+  color: red;
+  display: none;
+}
+
+.reset-suc-msg {
+  color: #088178;
+  display: none;
+}

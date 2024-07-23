@@ -1,0 +1,73 @@
+#hero {
+  background-color: rgba(0, 0, 0, 0.604);
+  height: 92vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.DetailBox {
+  background: rgba(0, 0, 0, 0.634);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  border-radius: 0 10px 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 30px;
+  border: 0;
+}
+
+.backPlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -999;
+  height: 122vh;
+}
+
+#hero h4 {
+  padding-bottom: 15px;
+  font-size: larger;
+  color: #bababa;
+}
+
+#hero h2 {
+  color: #815f08;
+  font-size: 58px;
+  border-bottom: 1px dotted #815f08;
+}
+
+#hero h1 {
+  color: #088178;
+  font-size: 90px;
+}
+
+#hero p {
+  color: #676767;
+}
+
+#hero button {
+  background-image: url("/src/assets/button/button.png");
+  background-color: transparent;
+  color: #088178;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  #hero h1 {
+    font-size: 60px;
+  }
+  #hero h2 {
+    font-size: 40px;
+  }
+}

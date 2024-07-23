@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 96%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 5px;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+
+.aside {
+  height: 100%;
+  width: 45%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-part img {
+  animation: leaves 2s ease-in-out infinite alternate;
+  height: 80%;
+  width: 80%;
+}
+
+.img-part {
+  height: 61vh;
+  width: 40vw;
+  overflow: hidden;
+}
+
+@keyframes leaves {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.aside-sec {
+  height: 100%;
+  width: 55%;
+  border-radius: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.Sign-up {
+  border-bottom: 1px solid rgb(26, 105, 223);
+  margin-bottom: 50px;
+  color: #6595fc;
+}
+
+.aside-sec input {
+  width: 30vw;
+  padding: 20px 10px;
+  font-size: larger;
+  outline: none;
+  background-color: white;
+  margin: 1vh 0;
+  border-radius: 30px;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.aside-sec span {
+  color: red;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+#forPass {
+  width: auto;
+}
+
+.btn {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.btn button {
+  padding: 15px;
+  width: 13vw;
+  border: 0;
+  background-color: rgb(40, 106, 247);
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid rgb(21, 94, 250);
+}
+
+.btn button:hover {
+  background-color: white;
+  color: rgb(47, 113, 255);
+}
+
+.field p {
+  color: red;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.AuthRedirect {
+  margin-top: 20px;
+}
+
+.AuthRedirect span {
+  color: green;
+  border-bottom: 1px solid green;
+  cursor: pointer;
+}
+
+.InvalidLogin {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+
+  .aside-sec input {
+    width: 35vw;
+  }
+
+  .btn button {
+    width: 15vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .aside {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .aside-sec {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .aside-sec input {
+    width: 80vw;
+  }
+
+  .btn button {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .aside-sec input {
+    width: 85vw;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .btn button {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .aside-sec input {
+    width: 90vw;
+  }
+
+  .btn button {
+    width: 50vw;
+  }
+}
