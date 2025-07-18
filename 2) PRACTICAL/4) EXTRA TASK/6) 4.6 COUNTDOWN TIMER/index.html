@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <div class="main">
+        <div class="overlay">
+            <div class="main-line">We are coming soon...</div>
+            <div id="end-time">Set your own end date and time:</div>
+
+            <div class="col">
+                <div>
+                    <input type="text" readonly value="0"><br>
+                    <label for="#">days</label>
+                </div>
+                <div>
+                    <input type="text" readonly value="0"><br>
+                    <label for="#">hours</label>
+                </div>
+                <div>
+                    <input type="text" readonly value="0"><br>
+                    <label for="#">minute</label>
+                </div>
+                <div>
+                    <input type="text" readonly value="0"><br>
+                    <label for="#">second</label>
+                </div>
+            </div>
+
+            <div class="date-time-input">
+                <input type="datetime-local" id="userEndDate">
+                <button id="startCountdown">Start Countdown</button>
+            </div>
+
+            <div id="completionMessage" style="display: none;">The countdown is complete!</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

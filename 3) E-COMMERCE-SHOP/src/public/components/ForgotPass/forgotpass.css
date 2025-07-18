@@ -1,0 +1,83 @@
+.forgotContainer {
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.forgotContainer .forgot-box {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 5vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.forgot-box h2 {
+  color: #088178;
+  text-align: center;
+}
+
+.field-forgot {
+  margin: 2vh 0;
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.sec-que {
+  margin-top: 20px;
+}
+
+.field-forgot input {
+  border: 0;
+  outline: none;
+  font-size: 15px;
+}
+
+.forgot-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.forgot-btn {
+  margin-top: 2vh;
+}
+
+.forgot-btn button {
+  padding: 10px;
+  width: 100%;
+  background-color: #088178;
+  border: 0;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.forgot-btn button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #088178;
+}
+
+.forgot-msg-suc {
+  color: green;
+  font-weight: 500;
+  display: none;
+}
+
+.forgot-msg-pass {
+  color: red;
+  display: none;
+}
+
+.forgot-msg-not {
+  color: red;
+  display: none;
+}

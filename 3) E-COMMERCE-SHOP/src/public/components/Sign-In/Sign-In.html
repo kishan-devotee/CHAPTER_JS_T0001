@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/public/components/Sign-up/Auth.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="aside">
+          <div class="img-part">
+            <img
+              src="/src/assets/background-video/vector.jpg"
+              alt="Back_IMG"
+              height="700"
+              width="700"
+            />
+          </div>
+        </div>
+
+        <div class="aside-sec">
+          <h1 class="Sign-up">Sign In</h1>
+          <form action="" onsubmit="FormSubmit(event)">
+            <div class="field">
+              <label for="email">Email Address <span>*</span></label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Demo@gmail.com"
+                id="mail"
+                class="LoginEmail"
+                oninput="validateEmail()"
+                autofocus
+                required
+              />
+              <p id="forEmail">* Email is not correct.</p>
+            </div>
+
+            <div class="field">
+              <label for="password">Password <span>*</span></label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="LoginPass"
+                placeholder="123@Demo"
+                oninput="validatePass()"
+                required
+              />
+              <p id="forPass">* Password is Incorrect.</p>
+            </div>
+            <span class="InvalidLogin"
+              >Email PassWord are incorrect, please try again!</span
+            >
+            <div class="btn">
+              <button type="submit" class="LoginButton" onclick="LoginUser()">
+                Login
+              </button>
+            </div>
+          </form>
+
+          <div class="AuthRedirect">
+            <p>
+              Create an account?
+              <span class="RegisterRedirect" onclick="signUp()">Register</span>
+            </p>
+          </div>
+          <div class="AuthRedirect">
+            <span onclick="forgotPass()">Forgot Password? </span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

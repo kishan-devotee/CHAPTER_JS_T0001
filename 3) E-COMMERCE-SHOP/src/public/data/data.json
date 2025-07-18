@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "name": "Luxury Leather Sofa",
+        "offerPrice": "2999",
+        "price": "3500",
+        "dimensions": "200 x 90 x 85 cm",
+        "category": "Living Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/41VylA+pu3L._AC_UL320_.jpg",
+        "quality": "Premium"
+    },
+    {
+        "id": 2,
+        "name": "Modern Wooden Dining Table",
+        "offerPrice": "1499",
+        "price": "1800",
+        "dimensions": "150 x 80 x 75 cm",
+        "category": "Dining Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/61L9JGCoYgL._AC_UL320_.jpg",
+        "quality": "High"
+    },
+    {
+        "id": 3,
+        "name": "Elegant Queen Bed Frame",
+        "offerPrice": "2199",
+        "price": "2500",
+        "dimensions": "180 x 200 cm",
+        "category": "Bedroom Furniture",
+        "img": "https://m.media-amazon.com/images/I/51mGjr-csXL._AC_UL320_.jpg",
+        "quality": "Luxury"
+    },
+    {
+        "id": 4,
+        "name": "Compact Study Desk",
+        "offerPrice": "499",
+        "price": "600",
+        "dimensions": "100 x 50 x 75 cm",
+        "category": "Office Furniture",
+        "img": "https://m.media-amazon.com/images/I/81m2C5AkCoL._AC_UL320_.jpg",
+        "quality": "Standard"
+    },
+    {
+        "id": 5,
+        "name": "Classic Wooden Bookshelf",
+        "offerPrice": "799",
+        "price": "1000",
+        "dimensions": "80 x 30 x 180 cm",
+        "category": "Office Furniture",
+        "img": "https://m.media-amazon.com/images/I/71y8VxM2q2L._AC_UL320_.jpg",
+        "quality": "High"
+    },
+    {
+        "id": 6,
+        "name": "Contemporary Coffee Table",
+        "offerPrice": "349",
+        "price": "450",
+        "dimensions": "60 x 60 x 45 cm",
+        "category": "Living Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/81jNCIwdbbL._AC_UL320_.jpg",
+        "quality": "Premium"
+    },
+    {
+        "id": 7,
+        "name": "Designer Accent Chair",
+        "offerPrice": "899",
+        "price": "1200",
+        "dimensions": "70 x 70 x 90 cm",
+        "category": "Living Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/71ezSt8OG3L._AC_UL320_.jpg",
+        "quality": "Luxury"
+    },
+    {
+        "id": 8,
+        "name": "Functional Office Chair",
+        "offerPrice": "299",
+        "price": "400",
+        "dimensions": "60 x 60 x 100 cm",
+        "category": "Office Furniture",
+        "img": "https://m.media-amazon.com/images/I/71HOigmEWGL._AC_UL320_.jpg",
+        "quality": "Standard"
+    },
+    {
+        "id": 9,
+        "name": "Spacious Wardrobe",
+        "offerPrice": "1499",
+        "price": "1800",
+        "dimensions": "200 x 60 x 220 cm",
+        "category": "Bedroom Furniture",
+        "img": "https://m.media-amazon.com/images/I/81ijVCU-AoL._AC_UL320_.jpg",
+        "quality": "High"
+    },
+    {
+        "id": 10,
+        "name": "Minimalist Nightstand",
+        "offerPrice": "199",
+        "price": "250",
+        "dimensions": "45 x 45 x 55 cm",
+        "category": "Bedroom Furniture",
+        "img": "https://m.media-amazon.com/images/I/71O03Y+YdFL._AC_UL320_.jpg",
+        "quality": "Standard"
+    },
+    {
+        "id": 11,
+        "name": "Elegant Glass Display Cabinet",
+        "offerPrice": "999",
+        "price": "1200",
+        "dimensions": "100 x 40 x 180 cm",
+        "category": "Living Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/71Aq8VZI5YL._AC_UL320_.jpg",
+        "quality": "High"
+    },
+    {
+        "id": 12,
+        "name": "Rustic Wooden TV Stand",
+        "offerPrice": "599",
+        "price": "700",
+        "dimensions": "150 x 40 x 50 cm",
+        "category": "Living Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/715EmmtY1LL._AC_UL320_.jpg",
+        "quality": "Standard"
+    },
+    {
+        "id": 13,
+        "name": "Modern Glass Dining Table Set",
+        "offerPrice": "1999",
+        "price": "2500",
+        "dimensions": "180 x 90 x 75 cm",
+        "category": "Dining Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/817oLm0vzcL._AC_UL320_.jpg",
+        "quality": "Luxury"
+    },
+    {
+        "id": 14,
+        "name": "Ergonomic Office Desk",
+        "offerPrice": "799",
+        "price": "1000",
+        "dimensions": "140 x 70 x 75 cm",
+        "category": "Office Furniture",
+        "img": "https://m.media-amazon.com/images/I/91igJGVyn1L._AC_UL320_.jpg",
+        "quality": "High"
+    },
+    {
+        "id": 15,
+        "name": "Vintage Rocking Chair",
+        "offerPrice": "499",
+        "price": "650",
+        "dimensions": "60 x 90 x 100 cm",
+        "category": "Living Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/71k-qBL77ZL._AC_UL320_.jpg",
+        "quality": "Premium"
+    },
+    {
+        "id": 16,
+        "name": "Space-Saving Bunk Bed",
+        "offerPrice": "1299",
+        "price": "1500",
+        "dimensions": "200 x 100 x 180 cm",
+        "category": "Bedroom Furniture",
+        "img": "https://m.media-amazon.com/images/I/71ilfKw96eL._AC_UL320_.jpg",
+        "quality": "High"
+    },
+    {
+        "id": 17,
+        "name": "L-Shaped Corner Sofa",
+        "offerPrice": "2499",
+        "price": "3000",
+        "dimensions": "250 x 90 x 85 cm",
+        "category": "Living Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/71jFkLILsxL._AC_UL320_.jpg",
+        "quality": "Luxury"
+    },
+    {
+        "id": 18,
+        "name": "Foldable Study Table",
+        "offerPrice": "299",
+        "price": "400",
+        "dimensions": "90 x 50 x 75 cm",
+        "category": "Office Furniture",
+        "img": "https://m.media-amazon.com/images/I/41HeAaXYPrL._AC_UY218_.jpg",
+        "quality": "Standard"
+    },
+    {
+        "id": 19,
+        "name": "Recliner Armchair",
+        "offerPrice": "899",
+        "price": "1200",
+        "dimensions": "80 x 90 x 100 cm",
+        "category": "Living Room Furniture",
+        "img": "https://m.media-amazon.com/images/I/819-nu37IGL._AC_UL320_.jpg",
+        "quality": "Premium"
+    },
+    {
+        "id": 20,
+        "name": "Classic Wooden Dresser",
+        "offerPrice": "599",
+        "price": "750",
+        "dimensions": "120 x 50 x 85 cm",
+        "category": "Bedroom Furniture",
+        "img": "https://m.media-amazon.com/images/I/51I6RH3PteL._AC_UL320_.jpg",
+        "quality": "High"
+    }
+]

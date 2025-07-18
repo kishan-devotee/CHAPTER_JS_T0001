@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(87, 146, 247);
+}
+
+.apiContainer {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.apiData {
+    margin-top: 10px;
+}

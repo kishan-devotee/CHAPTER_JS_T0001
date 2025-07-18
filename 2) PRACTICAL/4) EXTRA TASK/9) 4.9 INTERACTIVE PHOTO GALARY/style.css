@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+    height: 98.5vh;
+    background-color: #ddd;
+    padding: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #06D85F;
+    margin: 80px 0;
+  }
+  
+  .box {
+    width: 20%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #06D85F;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .button:hover {
+    background: #06D85F;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+  .content input {
+    width: 90%;
+    height: 4vh;
+    padding: 0 15px;
+    outline: none;
+    border: 0;
+    font-size: 20px;
+  }
+  .content input:focus {
+    color: #488f65;
+  }
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+}
+
+.gallery div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery div img {
+    width: 20vw;
+    height: 100%;
+    object-fit: fixed;
+    border-radius: 5px;
+    margin:30px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.gallery .tall {
+    grid-row: span 2;
+}
+
+.icon {
+    position: absolute;
+    z-index: 1;
+    width: 20vw;
+    height: 28%;
+    background-color: #141414af;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.icon .del {
+    font-size: xx-large;
+    color: rgb(190, 79, 79);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 20px;
+}
+
+.icon .eye {
+    color: #4c8b66;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 20px;
+    font-size: xx-large;
+}
+.icon .del:hover {
+    color: rgb(255, 0, 0);
+    transform: scale(2.2);
+}
+
+.icon .eye:hover {
+    color: #00c552;
+    transform: scale(2.2);
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.ModalBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  display: none;
+  background-color: #1b1b1b6b;
+}
+
+.ModalBox img {
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+  margin-top: 15px;
+}

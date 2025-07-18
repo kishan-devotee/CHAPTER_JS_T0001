@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playwrite+ES+Deco:wght@100..400&display=swap"
+    rel="stylesheet"
+  />
+    <title>responsive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <a class="button" href="#popup1"
+          ><span class="material-symbols-outlined">
+            control_point_duplicate
+          </span></a
+        >
+      </div>
+  
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <a class="close" href="#"><span onclick="onClose()">&times;</span></a>
+          <div class="content">
+            <form action="" onsubmit="addPhoto(event)">
+              <input type="text" autofocus id="inputUrl" name="task" placeholder="Enter Your Photo URL"/>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div class="ModalBox">
+          <span class="closeModal"></span>
+          <div>
+            <img src="" alt="sdv" height="700">
+          </div>
+        </div>
+
+    <div class="gallery">
+        
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
